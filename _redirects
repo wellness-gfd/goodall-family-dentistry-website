@@ -1,0 +1,11 @@
+# Netlify redirects — Goodall Family Dentistry
+# Permanent (301) moves from the old site / old URLs
+/patient-information                         /new-patients                    301
+/tmj-treatment                               /tmj-focused-emface-in-cary-nc   301
+/emface                                      /tmj-focused-emface-in-cary-nc   302
+/quietnite                                   /sleep-dentistry#quietnite       301
+/panther-creek-invitational-promotion        /new-patients                    301
+# Integrative Wellness is on hold (temporary 302s per the GFD Website Changes doc)
+/wellness                                    /services                        302
+/exion                                       /services                        302
+/health-coaching                             /services                        302
