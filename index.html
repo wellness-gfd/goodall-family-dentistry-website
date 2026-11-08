@@ -2315,7 +2315,7 @@ function setSEO(key,pg){
   document.querySelector('meta[name=description]').content=pg.meta;
   const url=SITE+(key==="home"?"":key);
   document.querySelector('link[rel=canonical]').href=pg.canonical?SITE+pg.canonical:url;
-  document.querySelector('meta[name=robots]').content=(pg.noindex||/(netlify\.app|pages\.dev)$/.test(location.hostname))?"noindex,follow":"index,follow"; /* keep the test address (pages.dev) out of Google */
+  document.querySelector('meta[name=robots]').content=(pg.noindex||/(netlify\.app|pages\.dev|workers\.dev)$/.test(location.hostname))?"noindex,follow":"index,follow"; /* keep the test addresses (pages.dev / workers.dev) out of Google */
   document.querySelector('meta[property="og:title"]').content=pg.title;
   document.querySelector('meta[property="og:description"]').content=pg.meta;
   document.querySelector('meta[property="og:url"]').content=url;
