@@ -1,0 +1,14 @@
+# Response headers (Cloudflare Pages) — Goodall Family Dentistry
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  # PRE-LAUNCH ONLY: keeps every page out of Google while the team reviews the test site.
+  # Delete the next line when goodallfamilydentistry.com is connected.
+  X-Robots-Tag: noindex
+
+# Long browser caching for photos and videos (they rarely change)
+/images/*
+  Cache-Control: public, max-age=2592000
+/videos/*
+  Cache-Control: public, max-age=2592000
