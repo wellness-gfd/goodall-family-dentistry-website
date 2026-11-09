@@ -859,7 +859,6 @@ const QUOTES = {
   "dental-implants":[["Dr. Booker is the greatest Dentist I’ve ever met. He listens and explains everything in such a pleasant manner.","Jason S."],["Dr. Booker and the team took great care of me. I had three extractions that he was able to take out in less than 10 minutes with no pain and minimal discomfort.","Sean M."]],
   "emergency-dentist":[["Was visiting family. Broke a tooth. Dr. Booker came in at 9:30 pm Saturday nite. Was so compassionate and caring.","Rebecca C."],["I was having pain and I contacted Goodall Family Dentistry’s office in the morning and they got me in to see Dr Goodall within a couple hours.","Michelle N."]],
   "for-your-comfort":[["I opted for nitrous oxide for the first time, and it made the experience surprisingly enjoyable.","Hirsh L."],["Getting to watch Netflix on the ceiling was a nice touch.","Mary Ellen D."]],
-  "orofacial-myofunctional-therapy":[["They offer therapies you won’t find elsewhere that address and correct issues that cause sleep disorders and air pathway issues (snoring, sleep apnea).","Carolyn D."]],
   "sleep-dentistry":[["They offer therapies you won’t find elsewhere that address and correct issues that cause sleep disorders and air pathway issues (snoring, sleep apnea).","Carolyn D."]],
   tmj:[["She has the most gentle touch and does everything in her power to make not only me but her other patients comfortable.","Katherine E."]],
   "new-patients":[["We did not want to go to a conglomerate practice and are thrilled we have found our Dentist in Cary!!","Richard D."],["Dr. Goodall treats patients like family. She takes a very holistic approach.","Susan G."],["…the office staff went over billing detail so everything was known before scheduling treatment.","Rick C."],["She’s out of network for me and worth every penny.","Zach B."]],
@@ -899,6 +898,7 @@ const I = {
   mouth:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 12c3-4 15-4 18 0-3 5-15 5-18 0z"/><path d="M3 12h18"/></svg>',
   pin:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>',
   book:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg>',
+  bonding:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.5 6.2C8.7 4.6 5.8 4.3 4.5 6s-.9 5.2.4 7.4S6.2 20.5 7.5 20.5s1.3-4.3 3-4.3 1.7 4.3 3 4.3 1.3-4.3 2.6-6.5c.6-1 1-2.3 1.1-3.5"/><path d="M12.6 6.4c.5-.3 1-.6 1.6-.7" stroke-dasharray="1.4 1.6"/><path d="M21.5 2.5 16.2 7.8"/><path d="M16.6 7.4l-1.3 1.3a1 1 0 0 1-1.4 0 1 1 0 0 1 0-1.4l1.3-1.3"/><path d="M7 9.5c.3-1 1-1.6 2-1.8" opacity=".6"/></svg>',
   card:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>'
 };
 
@@ -968,7 +968,7 @@ const SERVICES = {
     a:"With modern anesthesia, a root canal feels much like getting a filling. Most patients feel relief because the procedure removes the source of their pain — and you get to keep your natural tooth.",
     list:["Relieves severe toothache","Saves your natural tooth","Typically finished with a protective crown"],
     faqs:[["What are signs I might need a root canal?","Lingering sensitivity to hot or cold, severe pain when chewing, swelling, or a darkening tooth. Call (919) 336-5245 — we do our best to see dental emergencies the same day."],["Why does a tooth need a crown after a root canal?","A tooth that’s had a root canal can become brittle. A crown covers and protects it so it lasts."]]},
-  "dental-bonding":{t:"Dental Bonding",parent:"general-dentistry",icon:"sparkle",img:"drBookerConsult",
+  "dental-bonding":{t:"Dental Bonding",parent:"general-dentistry",icon:"bonding",img:"drBookerConsult",
     h1:"Dental Bonding <em>in Cary, NC</em>",
     meta:"Dental bonding in Cary, NC repairs chipped, cracked or gapped teeth with tooth-colored resin, often in one visit.",
     lead:"Bonding is one of the fastest, most affordable ways to refresh your smile.",
@@ -1112,22 +1112,12 @@ const SERVICES = {
     q:"What are the benefits of laser dentistry?",
     a:"Dental lasers allow very precise, minimally invasive treatment of soft tissue, often with less bleeding, fewer or no stitches, less discomfort and faster healing than traditional techniques.",
     treatH:"Laser treatments",
-    treat:[["Laser frenectomy (tongue & lip tie release)","A quick, precise release of a tight tongue or lip tie for babies, children and adults, usually without stitches. Myofunctional therapy before and after can help results last.","orofacial-myofunctional-therapy"],
+    treat:[["Laser frenectomy (tongue & lip tie release)","A quick, precise release of a tight tongue or lip tie for babies, children and adults, usually without stitches. Exercises before and after can help results last, and our team can refer you for myofunctional therapy if needed.",""],
       ["DIAGNOdent early cavity detection","A painless laser scan that helps find early decay hidden in the grooves of your teeth."],
       ["Laser gum treatment","Treats gum disease and reshapes gum tissue with less bleeding and swelling."]],
     video:"laser",
     techNote:"Our lasers use focused light to treat tissue precisely, sealing small blood vessels as they work.",
-    faqs:[["Is laser frenectomy (tongue-tie release) safe for babies?","Yes. The laser is precise, causes minimal bleeding, and usually requires no stitches. We’ll review aftercare and stretching exercises with you."],["Is laser treatment safe?","Yes. Dental lasers are a well-established, safe technology when used by trained clinicians."],["Do I need myofunctional therapy with a frenectomy?","It often helps. Exercises before and after a release can retrain the tongue and improve results. Ask about <a href=\"#orofacial-myofunctional-therapy\">orofacial myofunctional therapy</a>."]]},
-  "orofacial-myofunctional-therapy":{t:"Myofunctional Therapy",cat:"Supplemental",eyebrow:"Supplemental treatment",icon:"mouth",img:"smile",
-    title:"Myofunctional Therapy in Cary, NC | Goodall Family Dentistry",
-    h1:"Orofacial Myofunctional Therapy <em>in Cary, NC</em>",
-    meta:"Orofacial myofunctional therapy (OMT) in Cary, NC for kids and adults: tongue posture, mouth breathing, swallowing and airway habits.",
-    lead:"Personalized exercises that retrain the tongue, lips and face for better breathing, chewing and swallowing.",
-    q:"What is orofacial myofunctional therapy?",
-    a:"Orofacial myofunctional therapy (OMT) is a series of exercises that retrain the muscles of the tongue, lips and face. It can help improve tongue posture, nasal breathing, chewing and swallowing.",
-    intro:["Myofunctional therapy is a supplemental treatment we offer alongside your regular dental care – often paired with tongue-tie release, orthodontics, sleep care or <a href=\"#tmj-focused-emface-in-cary-nc\">EMFACE for TMJ</a>. Our team includes certified orofacial myofunctional therapists who guide kids and adults through a personalized exercise program. OMT can help support orthodontic results, airway health and comfortable jaw function. Results vary from person to person."],
-    list:["Mouth breathing and tongue thrust","Tongue posture and swallowing patterns","Support before and after a tongue-tie release","Support for orthodontic stability","Airway and sleep-related habits"],
-    faqs:[["Who can benefit from myofunctional therapy?","Children and adults with mouth breathing, tongue thrust, tongue ties, orthodontic relapse, TMJ tension or snoring."],["How long does OMT take?","Programs are personalized. Your therapist will recommend a plan and check your progress along the way. Results vary."],["Is functional or sleep treatment covered by insurance?","Some treatments may be covered by medical insurance. Our team can provide guidance for you to file for and receive these benefits."]]},
+    faqs:[["Is laser frenectomy (tongue-tie release) safe for babies?","Yes. The laser is precise, causes minimal bleeding, and usually requires no stitches. We’ll review aftercare and stretching exercises with you."],["Is laser treatment safe?","Yes. Dental lasers are a well-established, safe technology when used by trained clinicians."],["Do I need myofunctional therapy with a frenectomy?","It often helps. Exercises before and after a release can retrain the tongue and improve results. Our team is trained in <a href=\"#orofacial-myofunctional-therapy\">orofacial myofunctional therapy</a> and can refer you to a therapist if needed."]]},
   "sleep-dentistry":{t:"Sleep Apnea & Snoring",cat:"Advanced",icon:"moon",img:"drBookerConsult",
     title:"Sleep Apnea & Snoring Treatment in Cary, NC | Goodall",
     h1:"Sleep Apnea & Snoring Treatment <em>in Cary, NC</em>",
@@ -1137,13 +1127,13 @@ const SERVICES = {
     a:"Yes. Dentists can screen for signs of sleep-disordered breathing and provide treatments such as custom oral appliances and QuietNite airway therapy. Sleep apnea is diagnosed by a physician with a sleep study, and we coordinate with your doctor.",
     intro:["Loud snoring, gasping at night, morning headaches and daytime tiredness can all be signs of a breathing problem during sleep. Oral appliance therapy can be a comfortable alternative for patients who can’t tolerate CPAP or want to avoid the invasive surgery necessary with Inspire."],
     list:["Sleep and airway screening","Custom oral appliances","QuietNite airway therapy","Coordination with your physician and sleep testing"],
-    extra:()=>`<h2 id="quietnite">QuietNite airway therapy</h2><p>QuietNite is one of the airway-focused options we offer for snoring. A custom oral appliance is a different option: a device worn at night to help keep your airway open. After your evaluation, we’ll recommend the option that fits you best, and we often pair airway care with <a href="#orofacial-myofunctional-therapy">orofacial myofunctional therapy</a>.</p><h3>Signs you may benefit</h3><ul class="check"><li>Loud or frequent snoring</li><li>Gasping or pauses in breathing at night</li><li>Morning headaches or a dry mouth</li><li>Daytime sleepiness</li><li>In children: trouble focusing, hyperactivity or behavior changes, which can be signs of poor sleep</li></ul><p class="disclaimer">Sleep apnea is diagnosed by a physician with a sleep study.</p>`,
+    extra:()=>`<h2 id="quietnite">QuietNite airway therapy</h2><p>QuietNite is one of the airway-focused options we offer for snoring. A custom oral appliance is a different option: a device worn at night to help keep your airway open. After your evaluation, we’ll recommend the option that fits you best, and we look at tongue posture and breathing habits too (see <a href="#orofacial-myofunctional-therapy">myofunctional therapy</a> below).</p><h3>Signs you may benefit</h3><ul class="check"><li>Loud or frequent snoring</li><li>Gasping or pauses in breathing at night</li><li>Morning headaches or a dry mouth</li><li>Daytime sleepiness</li><li>In children: trouble focusing, hyperactivity or behavior changes, which can be signs of poor sleep</li></ul><p class="disclaimer">Sleep apnea is diagnosed by a physician with a sleep study.</p><h2 id="orofacial-myofunctional-therapy">Myofunctional therapy</h2><p>Mouth breathing, low tongue posture and swallowing habits can play a part in snoring and poor sleep. Orofacial myofunctional therapy (OMT) uses simple exercises to retrain the muscles of the tongue, lips and face. Our team is trained in myofunctional therapy, so we look for these signs during your sleep and airway evaluation.</p><p>We aren’t currently accepting new patients for myofunctional therapy, but if it could help you or your child, we’ll gladly refer you to a trusted therapist.</p>`,
     faqs:[["How do I know if I have sleep apnea?","Common signs include loud snoring, gasping at night, morning headaches and daytime sleepiness. A sleep study is needed to diagnose sleep apnea; we can help coordinate testing."],
       ["Is an oral appliance an alternative to a CPAP?","For many people with mild to moderate obstructive sleep apnea, a custom oral appliance is an effective, comfortable option. Your physician and our team will decide together."],
       ["What is QuietNite, and how is it different from an oral appliance?","QuietNite is one of the airway-focused options we offer for snoring. An oral appliance is a custom device worn at night to help keep your airway open. After your evaluation, we’ll recommend the option that fits you best."],
       ["Is sleep treatment covered by insurance?","Some treatments may be covered by medical insurance. Our team can provide guidance for you to file for and receive these benefits."]],
     cta:"Book a sleep & airway evaluation"},
-  "tmj-focused-emface-in-cary-nc":{t:"TMJ & Jaw Pain Relief (EMFACE)",short:"EMFACE for TMJ",cat:"Supplemental",eyebrow:"Supplemental treatment",icon:"jaw",img:"emfaceChair",isNew:true,
+  "tmj-focused-emface-in-cary-nc":{t:"TMJ & Jaw Pain Relief (EMFACE)",short:"TMJ & Jaw Pain",cat:"Advanced",icon:"jaw",img:"emfaceChair",isNew:true,
     title:"EMFACE for TMJ & Jaw Pain in Cary, NC | Goodall Family Dentistry",
     h1:"EMFACE for TMJ & Jaw Pain <em>in Cary, NC</em>",
     meta:"FDA-cleared, needle-free EMFACE treatment for TMJ and jaw pain in Cary, NC. 4 quick sessions, no downtime. Schedule your functional consultation today.",
@@ -1207,14 +1197,14 @@ const NAV = [
 const sname=k=>SERVICES[k].short||SERVICES[k].t;
 function megaHTML(){
   const col=(h,keys)=>`<div><h4>${h}</h4>${keys.map(k=>`<a href="#${k}">${sname(k)}</a>`).join("")}</div>`;
-  return `<div class="mega">${col("General",["general-dentistry",...SERVICES["general-dentistry"].children])}${col("Family & Cosmetic",["family-dentistry","kids-dentist","female-dentist","cosmetic-dentistry","teeth-whitening","orthodontics"]).replace("</div>",`<a href="#jojos-jungle-room">Jo-Jo's Jungle Room</a></div>`)}${col("Functional & Specialty",["dental-implants","sleep-dentistry","laser-dentistry","emergency-dentist","for-your-comfort"]).replace("</div>",`<h4>Supplemental treatments</h4><a href="#tmj-focused-emface-in-cary-nc">EMFACE for TMJ</a><a href="#orofacial-myofunctional-therapy">Myofunctional therapy</a></div>`)}</div>`;
+  return `<div class="mega">${col("General",["general-dentistry",...SERVICES["general-dentistry"].children])}${col("Family & Cosmetic",["family-dentistry","kids-dentist","female-dentist","cosmetic-dentistry","teeth-whitening","orthodontics"]).replace("</div>",`<a href="#jojos-jungle-room">Jo-Jo's Jungle Room</a></div>`)}${col("Functional & Specialty",["dental-implants","tmj-focused-emface-in-cary-nc","sleep-dentistry","laser-dentistry","emergency-dentist","for-your-comfort"])}</div>`;
 }
 document.getElementById("menu").innerHTML = NAV.map(([k,l,m])=>`<li><a href="#${k}" data-nav="${k}">${l}</a>${m?megaHTML():""}</li>`).join("") + `<li class="menu-pay"><a href="https://www.paymydentist.net/patientpay/69456?dataservicesid=069456NCD" target="_blank" rel="noopener">Pay My Bill<span class="sr-only"> (opens in a new tab)</span></a></li>`;
 /* Mobile menu: 5 clear choices; New Patients, Services and About open to more options. */
 const PAY_URL="https://www.paymydentist.net/patientpay/69456?dataservicesid=069456NCD";
 const DRAWER=[
   ["New Patients",[["new-patients","New patient info"],["insurance","Insurance & payment"],["membership-plan","Membership plan (no insurance)"],["cherry-payment-plans","Cherry payment plans"],["smile-quiz","Take the smile quiz"]]],
-  ["Services",[["general-dentistry","Checkups & cleanings"],["family-dentistry","Family & kids"],["jojos-jungle-room","Jo-Jo's Jungle Room"],["cosmetic-dentistry","Cosmetic & clear aligners"],["dental-implants","Dental implants"],["sleep-dentistry","Sleep apnea & snoring"],["supplemental-treatments","Supplemental: EMFACE for TMJ & myofunctional therapy"],["services","See all services"]]],
+  ["Services",[["general-dentistry","Checkups & cleanings"],["family-dentistry","Family & kids"],["jojos-jungle-room","Jo-Jo's Jungle Room"],["cosmetic-dentistry","Cosmetic & clear aligners"],["dental-implants","Dental implants"],["tmj-focused-emface-in-cary-nc","TMJ & jaw pain (EMFACE)"],["sleep-dentistry","Sleep apnea & snoring"],["services","See all services"]]],
   ["About Us",[["about","Meet the team"],["contact","Hours & directions"],["blog","Patient resources & blog"]]],
   ["emergency-dentist","Emergency care"],
   [PAY_URL,"Pay my bill"]];
@@ -1259,7 +1249,7 @@ function bandHTML(title="Ready to find your <em>dental home?</em>",sub="New pati
 function crumbs(trail){
   return `<nav class="crumbs" aria-label="Breadcrumb"><a href="#home">Home</a>${trail.map(([k,l])=>` / ${k?`<a href="#${k}">${l}</a>`:`<span aria-current="page">${l}</span>`}`).join("")}</nav>`;
 }
-const CARD={"general-dentistry":"Checkups, cleanings, fillings, crowns and root canals for every age.","teeth-cleaning":"Gentle cleanings with an oral cancer screening at every routine visit.","cavity-fillings":"Let’s repair cavities before they cause pain — with tooth-colored fillings.","crowns-and-bridges":"Restore damaged teeth or replace missing ones.","root-canal-therapy":"Relieve a tooth infection and save your natural tooth.","dental-bonding":"Repair chips and gaps with tooth-colored bonding.","family-dentistry":"Kids, teens, parents and grandparents — one dental home.","tooth-ache":"Get fast relief from tooth pain.","female-dentist":"Gentle, caring dental visits with Dr. Tina Goodall.","kids-dentist":"Fun, gentle visits in Jo-Jo's Jungle Room.","cosmetic-dentistry":"Whitening, bonding, veneers and clear aligners.","teeth-whitening":"In-office Zoom whitening and custom take-home trays.","orthodontics":"Straighten your teeth discreetly with clear aligners.","dental-implants":"Implants placed by Dr. Booker, restored by Dr. Booker or Dr. Goodall.","dental-implant-and-replacement-restorations":"Implant crowns, bridges and dentures.","laser-dentistry":"Tongue-tie release and gum care with less bleeding and faster healing.","orofacial-myofunctional-therapy":"Retrain tongue, lip and breathing habits.","sleep-dentistry":"Snoring and sleep apnea care, including QuietNite.","tmj-focused-emface-in-cary-nc":"FDA-cleared, needle-free EMFACE for jaw pain and clenching.","emergency-dentist":"Toothache, broken tooth or swelling? We do our best to see you the same day.","for-your-comfort":"A calm office and a team that goes at your pace."};
+const CARD={"general-dentistry":"Checkups, cleanings, fillings, crowns and root canals for every age.","teeth-cleaning":"Gentle cleanings with an oral cancer screening at every routine visit.","cavity-fillings":"Let’s repair cavities before they cause pain — with tooth-colored fillings.","crowns-and-bridges":"Restore damaged teeth or replace missing ones.","root-canal-therapy":"Relieve a tooth infection and save your natural tooth.","dental-bonding":"Repair chips and gaps with tooth-colored bonding.","family-dentistry":"Kids, teens, parents and grandparents — one dental home.","tooth-ache":"Get fast relief from tooth pain.","female-dentist":"Gentle, caring dental visits with Dr. Tina Goodall.","kids-dentist":"Fun, gentle visits in Jo-Jo's Jungle Room.","cosmetic-dentistry":"Whitening, bonding, veneers and clear aligners.","teeth-whitening":"In-office Zoom whitening and custom take-home trays.","orthodontics":"Straighten your teeth discreetly with clear aligners.","dental-implants":"Implants placed by Dr. Booker, restored by Dr. Booker or Dr. Goodall.","dental-implant-and-replacement-restorations":"Implant crowns, bridges and dentures.","laser-dentistry":"Tongue-tie release and gum care with less bleeding and faster healing.","sleep-dentistry":"Snoring and sleep apnea care, including QuietNite.","tmj-focused-emface-in-cary-nc":"FDA-cleared, needle-free EMFACE for jaw pain and clenching.","emergency-dentist":"Toothache, broken tooth or swelling? We do our best to see you the same day.","for-your-comfort":"A calm office and a team that goes at your pace."};
 function svcCard(k,dark){const s=SERVICES[k];return `<a class="card ${dark?"dark":""} reveal" href="#${k}">${s.isNew?'<span class="tag">New</span>':""}<div class="ico">${I[s.icon]}</div><h3>${sname(k)}</h3><p>${CARD[k]}</p><span class="link-arrow">Learn more<span class="sr-only"> about ${sname(k)}</span></span></a>`}
 
 const fmtDate=d=>new Date(d+"T12:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"});
@@ -1345,7 +1335,7 @@ const BLOG = [
 <ul class="check">
 <li><b>A custom night guard</b> to protect teeth and reduce strain from nighttime clenching</li>
 <li><b>Muscle therapy</b> to relax overworked jaw muscles, including EMFACE, a needle-free treatment we offer as part of functional care</li>
-<li><b>Orofacial myofunctional therapy</b> exercises that retrain tongue posture and jaw habits</li>
+<li><b>A referral for orofacial myofunctional therapy</b> when tongue posture or jaw habits are part of the picture</li>
 <li><b>Bite evaluation</b> and adjustments when the way your teeth meet is part of the problem</li>
 <li><b>Simple home habits</b> such as softer foods during flare-ups, warm compresses and avoiding gum chewing</li>
 </ul>
@@ -1475,7 +1465,7 @@ ${[["Tell us — we'll plan around it","Mention your nerves when you book. We'll
 <ul class="check">
 <li><b>Custom oral appliances:</b> worn at night, they gently position the lower jaw forward to help keep the airway open. Many people find them easier to use than other options.</li>
 <li><b>QuietNite:</b> a non-invasive laser treatment for snoring with no cutting.</li>
-<li><b>Myofunctional therapy:</b> exercises that strengthen and retrain the muscles of the tongue and face, which can support better breathing habits.</li>
+<li><b>Myofunctional therapy referrals:</b> exercises that strengthen and retrain the muscles of the tongue and face, which can support better breathing habits.</li>
 </ul>
 <h2>Better sleep starts with a conversation</h2>
 <p>If you or your partner have noticed snoring, mention it at your next visit or schedule a sleep consultation. It's an easy first step toward more restful nights.</p>`,
@@ -1525,7 +1515,7 @@ PAGES.home = ()=>{
   <section class="bg-white"><div class="wrap">
     <div class="section-head"><div><span class="eyebrow">Our dental services</span><h2>One dental home.<br><em>Every generation.</em></h2></div><p class="lead">From your child’s first visit to cosmetic treatments and implants, we care for every smile in your family—all under one roof in Cary.</p></div>
     <div class="tabs" role="tablist" id="svcTabs">
-      ${[["all","All care"],["General","Everyday care"],["Family","Kids & family"],["Cosmetic","Cosmetic"],["Implants","Implants"],["Advanced","Functional & specialty"],["Emergency","Emergency"],["Supplemental","Supplemental"]].map(([k,l],i)=>`<button class="tab" role="tab" aria-selected="${i===0}" data-cat="${k}">${l}</button>`).join("")}
+      ${[["all","All care"],["General","Everyday care"],["Family","Kids & family"],["Cosmetic","Cosmetic"],["Implants","Implants"],["Advanced","Functional & specialty"],["Emergency","Emergency"]].map(([k,l],i)=>`<button class="tab" role="tab" aria-selected="${i===0}" data-cat="${k}">${l}</button>`).join("")}
     </div>
     <div class="grid g3" id="svcGrid"></div>
     <p class="mt center"><a class="btn btn-ghost" href="#services">See all dental services</a></p>
@@ -1682,7 +1672,7 @@ PAGES.about = ()=>({title:"Meet Our Cary Dentists | Goodall Family Dentistry",
   <section><div class="wrap" style="max-width:860px"><h2 class="center">Questions about <em>our team</em></h2>${faqHTML(ABOUT_FAQ)}</div></section>
   ${bandHTML("Come meet us <em>in person.</em>")}`});
 
-const SVC_FAQ=[["What dental services do you offer?","Preventive cleanings and exams, periodontal therapy, fillings, crowns, bridges, veneers, root canals, bonding, cosmetic treatments like whitening and clear aligners, extractions of wisdom teeth and other teeth, dental implant placement and restoration, dentures, laser dentistry, sleep and airway care, TMJ/TMD treatment, QuietNite snore treatment, and orofacial myofunctional therapy."],
+const SVC_FAQ=[["What dental services do you offer?","Preventive cleanings and exams, periodontal therapy, fillings, crowns, bridges, veneers, root canals, bonding, cosmetic treatments like whitening and clear aligners, extractions of wisdom teeth and other teeth, dental implant placement and restoration, dentures, laser dentistry, sleep and airway care, TMJ/TMD treatment including EMFACE, and QuietNite snore treatment. Our team is also trained in orofacial myofunctional therapy and can refer you if needed."],
   OK.sameTime&&["Can my whole family be seen at the same appointment time?","Yes. Up to three kids can be seen in our kid-friendly Jo-Jo’s Jungle Room at the same time or back-to-back, and parents can be seen in an adult room at the same time or back-to-back with their child."],
   ["Do you handle dental emergencies?","Yes. Call (919) 336-5245 right away and we’ll get you in as quickly as possible. See <a href=\"#emergency-dentist\">emergency dental care</a>."],
   (FINANCE()||OK.membership)&&["Do you offer financing?","Yes. "+[FINANCE()&&`We partner with ${FINANCE()} for monthly payments.`,OK.membership&&"We also offer an in-house membership plan for patients without the benefit of insurance."].filter(Boolean).join(" ")]].filter(Boolean);
@@ -1691,14 +1681,11 @@ PAGES.services = ()=>({title:"Dental Services in Cary, NC | Goodall Family Denti
   crumbs:[[null,"How We Can Help"]],
   faq:SVC_FAQ,
   html:`
-  <section class="phero"><div class="wrap">${crumbs([[null,"How We Can Help"]])}<div class="phero-grid"><div><span class="eyebrow">How we can help</span><h1>Dental Services for the Whole Family <em>in Cary, NC</em></h1><p class="lead">From preventive cleanings to implants, sleep care and emergency visits — take a look at our services.</p><div class="hero-ctas"><a class="btn btn-primary" href="${BOOK}" target="_blank" rel="noopener">Book online</a><a class="btn btn-ghost" href="${TEL}">Call ${PHONE}</a></div>${trustLine()}</div>${photo("doctorsPlan","Dr. Goodall and Dr. Booker reviewing a treatment plan together")}</div></div></section>
+  <section class="phero"><div class="wrap">${crumbs([[null,"How We Can Help"]])}<div class="phero-grid"><div><span class="eyebrow">How we can help</span><h1>Dental Services for the Whole Family <em>in Cary, NC</em></h1><p class="lead">From preventive cleanings to implants, TMJ relief and sleep care — take a look at our services.</p><div class="hero-ctas"><a class="btn btn-primary" href="${BOOK}" target="_blank" rel="noopener">Book online</a><a class="btn btn-ghost" href="${TEL}">Call ${PHONE}</a></div>${trustLine()}</div>${photo("doctorsPlan","Dr. Goodall and Dr. Booker reviewing a treatment plan together")}</div></div></section>
   <section><div class="wrap">
-    <div class="answer"><span class="lbl">Quick answer</span><p>Goodall Family Dentistry in Cary, NC offers general, family, kids, cosmetic, implant, laser, sleep and emergency dentistry, plus supplemental treatments like EMFACE for TMJ and orofacial myofunctional therapy — all in one office.</p></div>
+    <div class="answer"><span class="lbl">Quick answer</span><p>Goodall Family Dentistry in Cary, NC offers general, family, kids, cosmetic, implant, laser, TMJ (including EMFACE), sleep and emergency dentistry — all in one office.</p></div>
     <h2 class="sr-only">Our dental services</h2>
-    <div class="grid g3">${Object.keys(SERVICES).filter(k=>!SERVICES[k].parent&&SERVICES[k].cat!=="Supplemental").map(k=>svcCard(k,k==="emergency-dentist")).join("")}</div>
-    <h2 id="supplemental-treatments" class="mt">Supplemental treatments</h2>
-    <p>Extra options we may add to your care plan when they can help, usually after an exam or consultation.</p>
-    <div class="grid g3">${["tmj-focused-emface-in-cary-nc","orofacial-myofunctional-therapy"].map(k=>svcCard(k)).join("")}</div>
+    <div class="grid g3">${Object.keys(SERVICES).filter(k=>!SERVICES[k].parent).map(k=>svcCard(k,k==="emergency-dentist")).join("")}</div>
   </div></section>
   <section class="bg-white"><div class="wrap" style="max-width:860px"><h2 class="center">Service FAQs</h2>${faqHTML(SVC_FAQ)}</div></section>
   ${bandHTML()}`});
@@ -1892,17 +1879,17 @@ const PLANS={
     expect:()=>[["Consultation & 3D scan","We review your health history, take a 3D scan and talk through your options."],["A written estimate","You’ll get clear costs before any treatment — no surprises."],["Your treatment plan","Implant placement, healing and your final smile, step by step."]],
     faqs:()=>SERVICES["dental-implants"].faqs.slice(0,5)},
   tmj:{label:"Jaw pain relief",visit:"Complimentary functional (TMJ) consultation",cta:"Schedule your functional consultation",svc:"tmj-focused-emface-in-cary-nc",quote:"tmj",cosmetic:true,coverNote:"EMFACE for TMJ is usually not covered by dental insurance.",
-    blurb:"A full jaw, bite and muscle evaluation — and options like EMFACE, night guards and myofunctional therapy.",
-    why:"Jaw pain often comes from overworked muscles. At your complimentary functional consultation, Dr. Goodall evaluates your jaw joint, muscles, bite and airway, then recommends a plan — which may include EMFACE, a custom night guard or myofunctional therapy.",
-    opts:[["EMFACE for TMJ","FDA-cleared, needle-free treatment — four 20-minute sessions, no downtime.","tmj-focused-emface-in-cary-nc"],["Custom night guard","Protects your teeth from clenching and grinding.","tmj-focused-emface-in-cary-nc"],["Myofunctional therapy","Exercises that retrain tongue and jaw habits.","orofacial-myofunctional-therapy"]],
+    blurb:"A full jaw, bite and muscle evaluation — and options like EMFACE and custom night guards.",
+    why:"Jaw pain often comes from overworked muscles. At your complimentary functional consultation, Dr. Goodall evaluates your jaw joint, muscles, bite and airway, then recommends a plan — which may include EMFACE, a custom night guard or a referral.",
+    opts:[["EMFACE for TMJ","FDA-cleared, needle-free treatment — four 20-minute sessions, no downtime.","tmj-focused-emface-in-cary-nc"],["Custom night guard","Protects your teeth from clenching and grinding.","tmj-focused-emface-in-cary-nc"]],
     detail:{sore:"Waking up with a sore jaw is often a sign of clenching at night — your consultation looks at why.",click:"Clicking along with muscle tightness is something we evaluate closely at your consultation.",headache:"Headaches at the temples can be linked to jaw muscle tension.",grind:"A night guard protects your teeth, but it doesn’t retrain the muscles — we’ll talk about both."},
-    expect:()=>[["Functional consultation","Dr. Goodall evaluates your jaw joint, muscles, bite and airway."],["A personalized plan","Options may include EMFACE, a night guard, myofunctional therapy or a specialist referral."],["If EMFACE fits","Four 20-minute sessions, usually about a week apart, with no downtime. Individual results vary."]],
+    expect:()=>[["Functional consultation","Dr. Goodall evaluates your jaw joint, muscles, bite and airway."],["A personalized plan","Options may include EMFACE, a night guard or a specialist referral."],["If EMFACE fits","Four 20-minute sessions, usually about a week apart, with no downtime. Individual results vary."]],
     faqs:()=>TMJ_FAQ.slice(0,5)},
   sleep:{btn:"Book your evaluation online",label:"Better sleep",visit:"Sleep & airway evaluation",cta:"Book a sleep & airway evaluation",svc:"sleep-dentistry",quote:"sleep-dentistry",
     blurb:"A screening for snoring and sleep apnea, with options like custom oral appliances and QuietNite.",
     why:"Snoring and daytime tiredness can be signs of a breathing problem during sleep. We screen your airway, coordinate with your physician (sleep apnea is diagnosed with a sleep study) and recommend options like a custom oral appliance or QuietNite airway therapy.",
-    opts:[["Custom oral appliance","A comfortable device worn at night to help keep your airway open.","sleep-dentistry"],["QuietNite airway therapy","An airway-focused option for snoring.","sleep-dentistry"],["Myofunctional therapy","Retrains tongue posture and breathing habits.","orofacial-myofunctional-therapy"]],
-    detail:{partner:"Looking into this for your partner? Share this plan with them — they’ll see the same recommendations.",child:"For kids, snoring and mouth breathing can affect sleep and growth. We look at the airway and tongue posture, and myofunctional therapy is often part of the plan."},
+    opts:[["Custom oral appliance","A comfortable device worn at night to help keep your airway open.","sleep-dentistry"],["QuietNite airway therapy","An airway-focused option for snoring.","sleep-dentistry"],["Myofunctional therapy referral","Our team is trained in myofunctional therapy and can refer you to a therapist if exercises would help.","orofacial-myofunctional-therapy"]],
+    detail:{partner:"Looking into this for your partner? Share this plan with them — they’ll see the same recommendations.",child:"For kids, snoring and mouth breathing can affect sleep and growth. We look at the airway and tongue posture, and can refer you for myofunctional therapy if it would help."},
     expect:()=>[["Sleep & airway screening","We review your symptoms, health history and airway."],["Sleep testing if needed","Sleep apnea is diagnosed by a physician with a sleep study — we can help coordinate it."],["An option that fits","We recommend the treatment that fits you and coordinate with your doctor."]],
     faqs:()=>SERVICES["sleep-dentistry"].faqs.slice(0,4)},
   kids:{btn:"Book a kids’ visit online",label:"Your child’s smile",visit:"Kids’ visit in Jo-Jo’s Jungle Room",cta:"Book a kids’ visit",svc:"kids-dentist",quote:"kids-dentist",
@@ -2067,7 +2054,7 @@ const TMJ_FAQ=[["Is EMFACE FDA-cleared for TMJ?","Yes. EMFACE is FDA-cleared for
   ["Can I use EMFACE with my night guard or Botox?","EMFACE can be used alongside a night guard. If you’ve had Botox or other facial treatments, let us know at your consultation so we can plan the timing."],
   ["Is EMFACE for TMJ covered by insurance?","Usually not."+(FINANCE()?` We offer ${FINANCE()} financing to make treatment easier to fit into your budget.`:"")],
   ["Who shouldn’t have EMFACE?","People with a pacemaker or implanted electronic device, metal implants in the treatment area, pregnancy, or an active infection in the area."],
-  ["What happens at a functional consultation?","Dr. Goodall reviews your symptoms and health history, then evaluates your jaw joint and muscles, bite, airway, tongue posture and breathing habits. You’ll leave with a personalized plan, which may include EMFACE, an oral appliance, myofunctional therapy, laser treatment or a referral to a specialist."],
+  ["What happens at a functional consultation?","Dr. Goodall reviews your symptoms and health history, then evaluates your jaw joint and muscles, bite, airway, tongue posture and breathing habits. You’ll leave with a personalized plan, which may include EMFACE, an oral appliance, laser treatment or a referral to a specialist."],
   ["Do I need to be a current patient or have a referral?","No. Anyone can schedule a functional consultation – no referral needed."]];
 PAGES["tmj-focused-emface-in-cary-nc"] = ()=>{
   const s=SERVICES["tmj-focused-emface-in-cary-nc"];
@@ -2119,7 +2106,7 @@ PAGES["tmj-focused-emface-in-cary-nc"] = ()=>{
   <section class="tight"><div class="wrap split">
     ${photo("drGoodallPoint","Dr. Tina Goodall, dentist providing TMJ care in Cary, NC")}
     <div><h2>Why see a dentist for TMJ relief?</h2><p>TMJ pain involves your muscles, your joint and your bite – so it should be treated by someone who understands all three. Dr. Tina Goodall brings 15+ years of experience caring for Cary families and looks at the whole picture before recommending treatment.</p>
-      <ul class="check"><li>A full evaluation of your jaw joint, muscles, bite and airway</li><li>More than one tool: EMFACE, custom night guards, myofunctional therapy and specialist referrals when needed</li><li>No-pressure care – clear options and costs up front</li><li>Rated 4.8★ on Google</li></ul>
+      <ul class="check"><li>A full evaluation of your jaw joint, muscles, bite and airway</li><li>More than one tool: EMFACE, custom night guards and specialist referrals when needed</li><li>No-pressure care – clear options and costs up front</li><li>Rated 4.8★ on Google</li></ul>
       ${(QUOTES.tmj||[]).map(([t,n])=>`<figure class="qb qb-inline"><div class="qb-stars" role="img" aria-label="5 out of 5 stars">★★★★★</div><blockquote><p>“${t}”</p></blockquote><figcaption>— <cite>${n}</cite> · Google Review</figcaption></figure>`).join("")}</div>
   </div></section>
   <section class="bg-white"><div class="wrap">
@@ -2341,7 +2328,7 @@ const main=document.getElementById("main");
 function route(){
   let full=(location.hash||"#home").slice(1); let [raw,qs]=full.split("?"); const params=new URLSearchParams(qs||"");
   if(ALIASES[raw]){raw=ALIASES[raw];history.replaceState(null,"","#"+raw+(qs?"?"+qs:""));}
-  const anchorMap={"insurance":"new-patients","visit":"new-patients","what-to-bring":"new-patients","meet-dr-tina-goodall":"about","meet-dr-booker":"about","meet-the-staff":"about","quietnite":"sleep-dentistry","supplemental-treatments":"services"};
+  const anchorMap={"insurance":"new-patients","visit":"new-patients","what-to-bring":"new-patients","meet-dr-tina-goodall":"about","meet-dr-booker":"about","meet-the-staff":"about","quietnite":"sleep-dentistry","orofacial-myofunctional-therapy":"sleep-dentistry"};
   const key=anchorMap[raw]||raw;
   const post=BLOG.find(b=>b.slug===key);
   let pg = PAGES[key]?PAGES[key](params):SERVICES[key]?servicePage(key):post?blogPost(post):PAGES.home();
@@ -2369,7 +2356,7 @@ function wire(){
   // service tabs
   const grid=document.getElementById("svcGrid");
   if(grid){
-    const render=cat=>{const keys=Object.keys(SERVICES).filter(k=>!SERVICES[k].parent&&(cat==="all"?SERVICES[k].cat!=="Supplemental":SERVICES[k].cat===cat)).slice(0,cat==="all"?6:9);
+    const render=cat=>{const keys=Object.keys(SERVICES).filter(k=>!SERVICES[k].parent&&(cat==="all"||SERVICES[k].cat===cat)).slice(0,cat==="all"?6:9);
       const extra=cat!=="all"?Object.keys(SERVICES).filter(k=>SERVICES[k].parent&&SERVICES[SERVICES[k].parent].cat===cat):[];
       grid.innerHTML=[...keys,...extra].map(k=>svcCard(k,k==="emergency-dentist")).join("");grid.querySelectorAll(".reveal").forEach(e=>e.classList.add("in"))};
     render("all");
