@@ -1269,8 +1269,8 @@ function midCTA(s){const sub=["Same-week appointments",OK.insurance&&"Insurance 
 
 function comfortStrip(){return `<section class="bg-white"><div class="wrap"><div class="section-head"><div><span class="eyebrow">From the moment you arrive</span><h2>Comfort starts<br><em>in the lobby.</em></h2></div></div>
   <div class="grid g3 strip3">${[["checkin","A warm welcome at check-in","Front desk team member greeting a patient at check-in, Goodall Family Dentistry Cary NC"],["coffeeBrew","Coffee, tea and filtered water","Coffee and tea bar in the Goodall Family Dentistry waiting area"],["waitSmile","A calm, comfortable waiting area","Patient relaxing in the waiting area at Goodall Family Dentistry in Cary"]].map(([k,c,alt])=>`<figure class="reveal" style="margin:0">${photo(k,alt,"","aspect-ratio:4/3")}<figcaption class="meta" style="margin-top:10px">${c}</figcaption></figure>`).join("")}</div></div></section>`}
-function jojoGallery(title="Inside <em>Jo-Jo's Jungle</em>",sub="A real kids' treatment room at our Cary office — painted jungle walls, picture books, a puppet who loves to brush, and a prize tower for brave smiles."){
-  const items=[["drGoodallJojoSmile","Dr. Goodall with a young patient in Jo-Jo's Jungle"],["jojoDoor","The sign at the entrance to Jo-Jo's Jungle"],["jojoPuppet","Our puppet friend, books and games"],["jojoPrize","The prize tower for after every visit"],["jojoMural","Hand-painted jungle friends on the walls"],["drBookerJojo","Dr. Booker teaching brushing with our puppet"]];
+function jojoGallery(title="Inside <em>Jo-Jo's Jungle</em>",sub="A real kids' treatment room at our Cary office — painted jungle walls, picture books, a puppet who loves to brush, and a prize tower for brave smiles.",swapHero=false){
+  const items=[swapHero?["jojoWide","The jungle room, with kid-sized chairs and a TV overhead"]:["drGoodallJojoSmile","Dr. Goodall with a young patient in Jo-Jo's Jungle"],["jojoDoor","The sign at the entrance to Jo-Jo's Jungle"],["jojoPuppet","Our puppet friend, books and games"],["jojoPrize","The prize tower for after every visit"],["jojoMural","Hand-painted jungle friends on the walls"],["drBookerJojo","Dr. Booker teaching brushing with our puppet"]];
   return `<section class="bg-white"><div class="wrap"><div class="section-head"><div><span class="eyebrow">For kids</span><h2>${title}</h2></div><p class="lead">${sub}</p></div>
   <div class="jojo-grid">${items.map(([k,c],i)=>`<figure class="reveal jg${i}">${photo(k,c+" — Jo-Jo's Jungle kids dental room, Cary NC")}<figcaption>${c}</figcaption></figure>`).join("")}</div>
   <p class="mt"><a class="btn btn-primary" href="${BOOK}" target="_blank" rel="noopener">Book a kids' visit</a> <a class="link-arrow" href="#jojos-jungle-room" style="margin-left:14px">More about Jo-Jo's Jungle</a></p></div></section>`;
@@ -2188,9 +2188,9 @@ PAGES["jojos-jungle-room"] = ()=>({title:"Jo-Jo's Jungle Kids Dental Room in Car
   <section class="phero"><div class="wrap">${crumbs([["family-dentistry","Family Dentistry"],[null,"Jo-Jo's Jungle Room"]])}
     <div class="phero-grid"><div><span class="eyebrow">Kids' dentistry in Cary</span><h1>Jo-Jo's Jungle Room: <em>Kids Dentistry in Cary, NC</em></h1><p class="lead">A treatment room made just for kids, so dental visits feel like an adventure${iff("sameTime"," — and parents can get their cleaning at the same time")}.</p>
       <div class="hero-ctas"><a class="btn btn-primary" id="heroBook" href="${BOOK}" target="_blank" rel="noopener">Book a kids' visit</a><a class="btn btn-ghost" href="${TEL}">Call ${PHONE}</a></div>${trustLine()}</div>
-      ${photo("jojoWide","Jo-Jo's Jungle Room, our kids' dental treatment room in Cary, NC")}</div>
+      ${photo("drGoodallJojoSmile","Dr. Goodall with a young patient in Jo-Jo's Jungle Room, our kids' dental treatment room in Cary, NC")}</div>
   </div></section>
-  ${jojoGallery("Take a peek <em>inside the jungle.</em>","Photos from our actual kids' room at 2128 High House Rd.")}
+  ${jojoGallery("Take a peek <em>inside the jungle.</em>","Photos from our actual kids' room at 2128 High House Rd.",true)}
   <section><div class="wrap content"><article>
     <div class="answer"><span class="lbl">Quick answer</span><p>Jo-Jo's Jungle Room is Goodall Family Dentistry's kid-themed treatment room in Cary, NC. Children get gentle cleanings and checkups surrounded by I Spy jungle walls, books, a brushing puppet and TVs overhead, with a prize at the end of every visit.</p></div>
     <h2>What makes it special</h2>
