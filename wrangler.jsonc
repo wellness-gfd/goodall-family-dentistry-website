@@ -1,0 +1,12 @@
+// Cloudflare deploy settings for goodallfamilydentistry.com
+{
+  "name": "goodall-family-dentistry-website",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./public",
+    // /dental-implants serves public/dental-implants.html
+    "html_handling": "auto-trailing-slash",
+    // unknown addresses show public/404.html with a real 404 status
+    "not_found_handling": "404-page"
+  }
+}

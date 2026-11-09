@@ -1,4 +1,4 @@
-# Redirects (Cloudflare Pages / Netlify) — Goodall Family Dentistry
+# Redirects (Cloudflare) — Goodall Family Dentistry
 # Permanent (301) moves from the old site / old URLs
 /patient-information                         /new-patients                    301
 /tmj-treatment                               /tmj-focused-emface-in-cary-nc   301
@@ -10,3 +10,12 @@
 /exion                                       /services                        302
 /health-coaching                             /services                        302
 /orofacial-myofunctional-therapy             /sleep-dentistry#orofacial-myofunctional-therapy 301
+# Short / alternate addresses
+/quiz                                         /smile-quiz                      301
+/smile-finder                                 /smile-quiz                      301
+/membership                                   /membership-plan                 301
+/dental-membership-plan                       /membership-plan                 301
+/clear-aligners                               /orthodontics                    301
+/sleep-apnea-treatment                        /sleep-dentistry                 301
+/meet-the-team                                /about                           301
+/dr-booke                                     /about                           301
