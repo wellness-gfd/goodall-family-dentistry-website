@@ -746,7 +746,7 @@ section{padding:72px 0}
     <div class="hero-ctas"><a class="btn btn-primary" href="https://book.modento.io/goodall-family-dentistry-cary-nc/patient-details" target="_blank" rel="noopener">Book online</a><a class="btn btn-ghost" href="tel:+19193365245">Call (919) 336-5245</a></div></div>
     <div>
       <div class="map"><div class="pin"><b>Goodall Family Dentistry</b><br>2128 High House Rd, Suite 200<br>Cary, NC 27519 · 2nd floor<br><a class="link-arrow" href="https://www.google.com/maps/search/?api=1&amp;query=Goodall+Family+Dentistry+2128+High+House+Rd+Cary+NC" target="_blank" rel="noopener">Open in Google Maps</a></div></div>
-      <div class="side-card mt"><h3>Office hours</h3><table class="hours"><tbody><tr class=""><td>Monday</td><td>8:00 AM – 4:00 PM</td></tr><tr class=""><td>Tuesday</td><td>10:00 AM – 5:00 PM</td></tr><tr class=""><td>Wednesday</td><td>9:00 AM – 5:00 PM</td></tr><tr class=""><td>Thursday</td><td>8:00 AM – 4:00 PM</td></tr><tr class=""><td>Friday</td><td>9:00 AM – 2:00 PM</td></tr><tr class=""><td>Saturday</td><td>By appointment</td></tr><tr class="today"><td>Sunday</td><td>Closed</td></tr></tbody></table><p class="mt" style="margin-bottom:0">Phone: <a href="tel:+19193365245"><b>(919) 336-5245</b></a></p></div>
+      <div class="side-card mt"><h3>Office hours</h3><table class="hours"><tbody><tr class=""><td>Monday</td><td>8:00 AM – 4:00 PM</td></tr><tr class="today"><td>Tuesday</td><td>10:00 AM – 5:00 PM</td></tr><tr class=""><td>Wednesday</td><td>9:00 AM – 5:00 PM</td></tr><tr class=""><td>Thursday</td><td>8:00 AM – 4:00 PM</td></tr><tr class=""><td>Friday</td><td>9:00 AM – 2:00 PM</td></tr><tr class=""><td>Saturday</td><td>By appointment</td></tr><tr class=""><td>Sunday</td><td>Closed</td></tr></tbody></table><p class="mt" style="margin-bottom:0">Phone: <a href="tel:+19193365245"><b>(919) 336-5245</b></a></p></div>
     </div>
   </div></section></main>
 
@@ -1996,7 +1996,7 @@ PAGES["smile-plan"]=(params)=>{
     html:`<section class="phero"><div class="wrap">${crumbs([["smile-quiz","Smile Quiz"],[null,"Your Smile Plan"]])}<div class="quiz-page"><div><span class="eyebrow">Your smile plan</span><h1>Let’s build <em>your smile plan.</em></h1><p class="lead">Answer four quick questions and we’ll put together your personalized plan.</p></div>${quizHTML("plan-page")}</div></div></section>`};
   const p=PLANS[k], d=params.get("d"), c=COMFORT_TXT[params.get("c")]?params.get("c"):"fine", pay=PAY_SHORT[params.get("p")]?params.get("p"):"other", parent=params.get("parent")==="1";
   const B=(cls="btn-primary")=>`<a class="btn ${cls}" href="${BOOK}" target="_blank" rel="noopener" data-track="book_click" data-label="smile plan">${p.btn||"Book your consultation online"}</a>`;
-  const note=(p.detail&&p.detail[d])||"";
+  const note=(p.detail&&Object.prototype.hasOwnProperty.call(p.detail,d)&&typeof p.detail[d]==="string")?p.detail[d]:"";
   const kidsParent=k==="kids"&&parent?"Up to three kids can be seen in Jo-Jo’s Jungle Room at the same time, and you can be seen in an adult room at the same time or back-to-back — just let us know when you book.":"";
   const payHTML=pay==="innet"?`<p>Good news — we’re in-network with Delta Dental Premier and Blue Cross Blue Shield of North Carolina. We’ll check your benefits before your visit.</p>`
     :pay==="other"?`<p>Have a different dental plan? We’ll give you what you need to use your out-of-network benefits, and we’ll check your coverage before your visit.</p>`

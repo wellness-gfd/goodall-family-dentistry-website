@@ -769,7 +769,7 @@ section{padding:72px 0}
   </article><aside class="side">
     <div class="side-card cta"><h3>Book your visit</h3><p style="color:#CFE3E1">Same-week appointments. New patients welcome.</p>
       <a class="btn btn-mint" style="width:100%" href="https://book.modento.io/goodall-family-dentistry-cary-nc/patient-details" target="_blank" rel="noopener">Book online</a>
-      <p style="margin:14px 0 0;font-size:.9rem;color:#CFE3E1;display:flex;align-items:center;gap:8px"><span class="open-dot closed"></span>Closed · opens tomorrow 8 AM</p></div>
+      <p style="margin:14px 0 0;font-size:.9rem;color:#CFE3E1;display:flex;align-items:center;gap:8px"><span class="open-dot closed"></span>Closed · opens tomorrow 9 AM</p></div>
     <div class="side-card"><h3>Family Dentistry</h3><ul><li><a class="" href="/family-dentistry">Family Dentistry</a></li><li><a class="on" href="/kids-dentist">Kids Dentist</a></li><li><a class="" href="/female-dentist">Female Dentist</a></li><li><a class="" href="/tooth-ache">Toothache Relief</a></li></ul></div>
     <div class="side-card"><h3>Insurance &amp; payment</h3><p style="font-size:.94rem;color:var(--ink-2);margin:0">In-network: Delta Dental Premier &amp; BCBS of NC. Monthly payments with Cherry and CareCredit. <a href="/new-patients#insurance">Learn more</a></p></div>
   </aside></div></section>
@@ -2025,7 +2025,7 @@ PAGES["smile-plan"]=(params)=>{
     html:`<section class="phero"><div class="wrap">${crumbs([["smile-quiz","Smile Quiz"],[null,"Your Smile Plan"]])}<div class="quiz-page"><div><span class="eyebrow">Your smile plan</span><h1>Let’s build <em>your smile plan.</em></h1><p class="lead">Answer four quick questions and we’ll put together your personalized plan.</p></div>${quizHTML("plan-page")}</div></div></section>`};
   const p=PLANS[k], d=params.get("d"), c=COMFORT_TXT[params.get("c")]?params.get("c"):"fine", pay=PAY_SHORT[params.get("p")]?params.get("p"):"other", parent=params.get("parent")==="1";
   const B=(cls="btn-primary")=>`<a class="btn ${cls}" href="${BOOK}" target="_blank" rel="noopener" data-track="book_click" data-label="smile plan">${p.btn||"Book your consultation online"}</a>`;
-  const note=(p.detail&&p.detail[d])||"";
+  const note=(p.detail&&Object.prototype.hasOwnProperty.call(p.detail,d)&&typeof p.detail[d]==="string")?p.detail[d]:"";
   const kidsParent=k==="kids"&&parent?"Up to three kids can be seen in Jo-Jo’s Jungle Room at the same time, and you can be seen in an adult room at the same time or back-to-back — just let us know when you book.":"";
   const payHTML=pay==="innet"?`<p>Good news — we’re in-network with Delta Dental Premier and Blue Cross Blue Shield of North Carolina. We’ll check your benefits before your visit.</p>`
     :pay==="other"?`<p>Have a different dental plan? We’ll give you what you need to use your out-of-network benefits, and we’ll check your coverage before your visit.</p>`
