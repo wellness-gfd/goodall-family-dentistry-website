@@ -18,5 +18,5 @@ https://goodall-family-dentistry-website.wellness-795.workers.dev
 3. Commit `src/` and `public/`, push.
 
 ## At launch (when the real domain is connected)
-- Delete the `X-Robots-Tag: noindex` line in `public/_headers`.
+- Done at launch: Google indexing is on (noindex removed from `public/_headers`).
 - Old site addresses keep working: page addresses match the old site, and other moves are in `public/_redirects`.
