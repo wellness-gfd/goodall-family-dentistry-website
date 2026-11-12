@@ -691,6 +691,7 @@ section{padding:72px 0}
   .doc .ph{min-height:0;aspect-ratio:16/11}
   .doc-body{padding:20px}
   .staff-grid{grid-template-columns:1fr 1fr!important;gap:12px}
+  .staff-grid .staff:last-child:nth-child(odd){grid-column:1/-1;justify-self:center;width:calc(50% - 6px)}
   .staff div.s-body{padding:10px 12px}.staff span{font-size:.8rem;line-height:1.35;display:block}
   .doc-cards{gap:14px}
   .doc-cards .card{display:grid;grid-template-columns:118px 1fr}
@@ -701,7 +702,7 @@ section{padding:72px 0}
   .soft-band{padding:20px 18px 4px}
   .trust-line{font-size:.82rem;gap:4px 12px}.trust-line li+li::before{margin-right:8px}
 }
-@media (min-width:601px) and (max-width:900px){.staff-grid{grid-template-columns:repeat(3,1fr)!important}}
+@media (min-width:601px){.staff-grid{grid-template-columns:repeat(3,1fr)!important}}
 @media (max-width:600px){
   .grid>.card:has(>.ico){display:grid;grid-template-columns:44px 1fr;column-gap:14px;align-items:start;padding:16px}
   .grid>.card:has(>.ico) .ico{grid-row:1/4;margin:0}
@@ -1825,7 +1826,7 @@ PAGES.about = ()=>({title:"Meet Our Cary Dentists | Goodall Family Dentistry",
   <section class="tight" style="padding-top:0"><div class="wrap"><figure class="reveal docs-fig">${photo("doctorsHeart","Dr. Goodall and Dr. Booker making a heart with their hands")}<figcaption class="float-card"><b style="color:var(--teal-900)">Two dentists, one family.</b><br><span style="color:var(--ink-2)">Dr. Goodall and Dr. Booker share the same gentle, patient-first approach.</span></figcaption></figure></div></section>
   <section class="bg-white" id="meet-the-staff"><div class="wrap">
     <div class="section-head"><div><span class="eyebrow">Meet the staff</span><h2>Meet <em>our team.</em></h2></div><p class="staff-hint" style="color:var(--ink-2);margin:0"><span class="hint-hover">Hover over a photo to see their fun side.</span><span class="hint-tap">Tap a photo to see their fun side.</span></p></div>
-    <div class="grid g4 staff-grid">${STAFF.map(([n,r])=>`<div class="staff reveal" tabindex="0"><div class="ph"><img class="s-main" src="${IMAGES.staff(n)}" srcset="${IMAGES.staff(n).replace(".jpg","-400.webp")} 400w, ${IMAGES.staff(n).replace(".jpg","-800.webp")} 800w" sizes="(max-width:600px) 46vw, (max-width:900px) 30vw, 270px" width="800" height="800" alt="${n}, ${r} at Goodall Family Dentistry in Cary NC" loading="lazy" onerror="this.remove()"><img class="s-fun" src="${IMAGES.staff(n,1)}" srcset="${IMAGES.staff(n,1).replace(".jpg","-400.webp")} 400w, ${IMAGES.staff(n,1).replace(".jpg","-800.webp")} 800w" sizes="(max-width:600px) 46vw, (max-width:900px) 30vw, 270px" width="800" height="800" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()"><div class="ph-label initial" aria-hidden="true">${n[0]}</div></div><div class="s-body"><h3>${n}</h3><span>${r}</span></div></div>`).join("")}</div>
+    <div class="grid g4 staff-grid">${STAFF.map(([n,r])=>`<div class="staff reveal" tabindex="0"><div class="ph"><img class="s-main" src="${IMAGES.staff(n)}" srcset="${IMAGES.staff(n).replace(".jpg","-400.webp")} 400w, ${IMAGES.staff(n).replace(".jpg","-800.webp")} 800w" sizes="(max-width:600px) 46vw, (max-width:900px) 30vw, 400px" width="800" height="800" alt="${n}, ${r} at Goodall Family Dentistry in Cary NC" loading="lazy" onerror="this.remove()"><img class="s-fun" src="${IMAGES.staff(n,1)}" srcset="${IMAGES.staff(n,1).replace(".jpg","-400.webp")} 400w, ${IMAGES.staff(n,1).replace(".jpg","-800.webp")} 800w" sizes="(max-width:600px) 46vw, (max-width:900px) 30vw, 400px" width="800" height="800" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()"><div class="ph-label initial" aria-hidden="true">${n[0]}</div></div><div class="s-body"><h3>${n}</h3><span>${r}</span></div></div>`).join("")}</div>
   </div></section>
   ${videoCarousel(["goodall","booker","april","twoKinds","summer","genz","neck","race","glove"],"Get to know <em>our team.</em>","A peek at the people behind your smile — on and off the clock.")}
   <section><div class="wrap" style="max-width:860px"><h2 class="center">Questions about <em>our team</em></h2>${faqHTML(ABOUT_FAQ)}</div></section>
