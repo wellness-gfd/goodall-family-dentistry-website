@@ -351,7 +351,13 @@ a.card:hover,.card.hover:hover{transform:translateY(-4px);box-shadow:var(--shado
 @media (max-width:800px){.doc{grid-template-columns:1fr}.doc .ph{min-height:320px}}
 .staff{background:#fff;border-radius:var(--r-md);overflow:hidden;border:1px solid var(--line)}
 .staff .ph{border-radius:0;aspect-ratio:1}
-.staff .ph img{object-position:center 20%}
+.staff .ph img{object-position:center;transition:opacity .35s ease}
+.staff .ph img.s-fun{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0}
+@media (hover:hover){.staff:hover .ph img.s-fun{opacity:1}}
+.staff.show-fun .ph img.s-fun,.staff:focus-visible .ph img.s-fun{opacity:1}
+.staff{cursor:pointer}
+.hint-tap{display:none}@media (hover:none){.hint-hover{display:none}.hint-tap{display:inline}}
+@media (prefers-reduced-motion:reduce){.staff .ph img{transition:none}}
 .ph-label.initial{font-family:var(--display);font-size:3.2rem;color:var(--teal-500);font-weight:400}
 .doc .ph img{object-position:center 20%}
 .staff div.s-body{padding:14px 16px}
@@ -769,7 +775,7 @@ section{padding:72px 0}
   </article><aside class="side">
     <div class="side-card cta"><h3>Book your visit</h3><p style="color:#CFE3E1">Same-week appointments. New patients welcome.</p>
       <a class="btn btn-mint" style="width:100%" href="https://book.modento.io/goodall-family-dentistry-cary-nc/patient-details" target="_blank" rel="noopener">Book online</a>
-      <p style="margin:14px 0 0;font-size:.9rem;color:#CFE3E1;display:flex;align-items:center;gap:8px"><span class="open-dot closed"></span>Closed · opens tomorrow 9 AM</p></div>
+      <p style="margin:14px 0 0;font-size:.9rem;color:#CFE3E1;display:flex;align-items:center;gap:8px"><span class="open-dot closed"></span>Closed · opens tomorrow 8 AM</p></div>
     <div class="side-card"><h3>General Dentistry</h3><ul><li><a class="" href="/general-dentistry">General Dentistry</a></li><li><a class="" href="/teeth-cleaning">Teeth Cleaning</a></li><li><a class="" href="/cavity-fillings">Cavity Fillings</a></li><li><a class="" href="/crowns-and-bridges">Crowns &amp; Bridges</a></li><li><a class="on" href="/root-canal-therapy">Root Canal Therapy</a></li><li><a class="" href="/dental-bonding">Dental Bonding</a></li></ul></div>
     <div class="side-card"><h3>Insurance &amp; payment</h3><p style="font-size:.94rem;color:var(--ink-2);margin:0">In-network: Delta Dental Premier &amp; BCBS of NC. Monthly payments with Cherry and CareCredit. <a href="/new-patients#insurance">Learn more</a></p></div>
   </aside></div></section>
@@ -859,7 +865,7 @@ const IMAGES = {
   jojoMonkey:  "/images/jojo-monkey.jpg",
   waiting:     "/images/waiting-room.jpg",
   emface:      "/images/emface.jpg",
-  staff: n =>  "/images/staff-" + n.toLowerCase() + ".jpg"
+  staff: (n,fun) =>  "/images/staff-" + n.toLowerCase() + (fun?"-fun":"") + ".jpg"
 };
 
 /* 2) CONFIRMATION SWITCHES — claims from the old-site doc that the office has NOT confirmed yet.
@@ -1708,8 +1714,8 @@ PAGES.about = ()=>({title:"Meet Our Cary Dentists | Goodall Family Dentistry",
   <section class="tight"><div class="wrap"><div class="about-facts"><div><b>7,000+</b><span>happy patients</span></div><div><b>350+</b><span>Google reviews · 4.8 rating</span></div><div><b>15+ years</b><span>serving Cary families</span></div><div><b>2 dentists</b><span>trained at UNC-Chapel Hill</span></div></div></div></section>
   <section class="tight" style="padding-top:0"><div class="wrap"><figure class="reveal docs-fig">${photo("doctorsHeart","Dr. Goodall and Dr. Booker making a heart with their hands")}<figcaption class="float-card"><b style="color:var(--teal-900)">Two dentists, one family.</b><br><span style="color:var(--ink-2)">Dr. Goodall and Dr. Booker share the same gentle, patient-first approach.</span></figcaption></figure></div></section>
   <section class="bg-white" id="meet-the-staff"><div class="wrap">
-    <div class="section-head"><div><span class="eyebrow">Meet the staff</span><h2>Meet <em>our team.</em></h2></div></div>
-    <div class="grid g4 staff-grid">${STAFF.map(([n,r])=>`<div class="staff reveal"><div class="ph"><img src="${IMAGES.staff(n)}" alt="${n}, ${r} at Goodall Family Dentistry in Cary NC" loading="lazy" onerror="this.remove()"><div class="ph-label initial" aria-hidden="true">${n[0]}</div></div><div class="s-body"><h3>${n}</h3><span>${r}</span></div></div>`).join("")}</div>
+    <div class="section-head"><div><span class="eyebrow">Meet the staff</span><h2>Meet <em>our team.</em></h2></div><p class="staff-hint" style="color:var(--ink-2);margin:0"><span class="hint-hover">Hover over a photo to see their fun side.</span><span class="hint-tap">Tap a photo to see their fun side.</span></p></div>
+    <div class="grid g4 staff-grid">${STAFF.map(([n,r])=>`<div class="staff reveal" tabindex="0"><div class="ph"><img class="s-main" src="${IMAGES.staff(n)}" srcset="${IMAGES.staff(n).replace(".jpg","-400.webp")} 400w, ${IMAGES.staff(n).replace(".jpg","-800.webp")} 800w" sizes="(max-width:600px) 46vw, (max-width:900px) 30vw, 270px" width="800" height="800" alt="${n}, ${r} at Goodall Family Dentistry in Cary NC" loading="lazy" onerror="this.remove()"><img class="s-fun" src="${IMAGES.staff(n,1)}" srcset="${IMAGES.staff(n,1).replace(".jpg","-400.webp")} 400w, ${IMAGES.staff(n,1).replace(".jpg","-800.webp")} 800w" sizes="(max-width:600px) 46vw, (max-width:900px) 30vw, 270px" width="800" height="800" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()"><div class="ph-label initial" aria-hidden="true">${n[0]}</div></div><div class="s-body"><h3>${n}</h3><span>${r}</span></div></div>`).join("")}</div>
   </div></section>
   ${videoCarousel(["goodall","booker","april","twoKinds","summer","genz","neck","race","glove"],"Get to know <em>our team.</em>","A peek at the people behind your smile — on and off the clock.")}
   <section><div class="wrap" style="max-width:860px"><h2 class="center">Questions about <em>our team</em></h2>${faqHTML(ABOUT_FAQ)}</div></section>
@@ -2432,6 +2438,7 @@ new MutationObserver(ms=>ms.forEach(m=>m.addedNodes.forEach(n=>n.nodeType===1&&f
 /* ---------- interactions ---------- */
 let qbTimers=[];
 function wire(){
+  document.querySelectorAll(".staff").forEach(c=>{if(c.dataset.w)return;c.dataset.w=1;const t=()=>c.classList.toggle("show-fun");c.addEventListener("click",()=>{if(!matchMedia("(hover:hover)").matches)t()});c.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();t()}})});
   qbTimers.forEach(clearInterval);qbTimers=[];
   // reveal on scroll
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
