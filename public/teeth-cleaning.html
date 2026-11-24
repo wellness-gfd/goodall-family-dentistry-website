@@ -705,7 +705,7 @@ section{padding:72px 0}
   .soft-band{padding:20px 18px 4px}
   .trust-line{font-size:.82rem;gap:4px 12px}.trust-line li+li::before{margin-right:8px}
 }
-@media (min-width:601px){.staff-grid{grid-template-columns:repeat(3,1fr)!important}}
+@media (min-width:601px){.staff-grid{grid-template-columns:repeat(6,1fr)!important}.staff-grid>.staff{grid-column:span 2}.staff-grid>.staff:nth-child(3n+1):nth-last-child(2){grid-column:2/span 2}.staff-grid>.staff:nth-child(3n+1):last-child{grid-column:3/span 2}}
 @media (max-width:600px){
   .grid>.card:has(>.ico){display:grid;grid-template-columns:44px 1fr;column-gap:14px;align-items:start;padding:16px}
   .grid>.card:has(>.ico) .ico{grid-row:1/4;margin:0}
@@ -774,7 +774,7 @@ section{padding:72px 0}
   </article><aside class="side">
     <div class="side-card cta"><h3>Book your visit</h3><p style="color:#CFE3E1">Same-week appointments. New patients welcome.</p>
       <a class="btn btn-mint" style="width:100%" href="https://book.modento.io/goodall-family-dentistry-cary-nc/patient-details" target="_blank" rel="noopener">Book online</a>
-      <p style="margin:14px 0 0;font-size:.9rem;color:#CFE3E1;display:flex;align-items:center;gap:8px"><span class="open-dot closed"></span>Closed · opens tomorrow 8 AM</p></div>
+      <p style="margin:14px 0 0;font-size:.9rem;color:#CFE3E1;display:flex;align-items:center;gap:8px"><span class="open-dot "></span>Open now · until 5 PM</p></div>
     <div class="side-card"><h3>General Dentistry</h3><ul><li><a class="" href="/general-dentistry">General Dentistry</a></li><li><a class="on" href="/teeth-cleaning">Teeth Cleaning</a></li><li><a class="" href="/cavity-fillings">Cavity Fillings</a></li><li><a class="" href="/crowns-and-bridges">Crowns &amp; Bridges</a></li><li><a class="" href="/root-canal-therapy">Root Canal Therapy</a></li><li><a class="" href="/dental-bonding">Dental Bonding</a></li></ul></div>
     <div class="side-card"><h3>Insurance &amp; payment</h3><p style="font-size:.94rem;color:var(--ink-2);margin:0">In-network: Delta Dental Premier &amp; BCBS of NC. Monthly payments with Cherry and CareCredit. <a href="/new-patients#insurance">Learn more</a></p></div>
   </aside></div></section>
@@ -1218,7 +1218,7 @@ SERVICES["family-dentistry"].children=["kids-dentist","female-dentist","tooth-ac
 SERVICES["cosmetic-dentistry"].children=["teeth-whitening","orthodontics"];
 SERVICES["dental-implants"].children=["dental-implant-and-replacement-restorations"];
 
-const STAFF = [["Brenda","Director of Operations, Orofacial Myofunctional Therapist"],["April","Dental Hygienist, Orofacial Myofunctional Therapist"],["Joanna","Dental Hygienist"],["Jaclyn","Certified Dental Assistant"],["Ailyn","Dental Assistant II"],["Brian","Dental Assistant"],["Kim","Insurance Coordinator"],["Gabriela","Financial Coordinator"],["Sue","Treatment Plan Coordinator"]];
+const STAFF = [["Brenda","Director of Operations, Orofacial Myofunctional Therapist"],["April","Dental Hygienist, Orofacial Myofunctional Therapist"],["Joanna","Dental Hygienist"],["Jaclyn","Certified Dental Assistant"],["Ailyn","Dental Assistant II"],["Brian","Dental Assistant"],["Kim","Insurance Coordinator"],["Gabriela","Financial Coordinator"]];
 /* ↑ Matches the staff shown on the current site (Nov 2026). Confirm before launch. */
 
 /* Friday hours stay hidden until confirmed (OK.friday). */
@@ -1330,7 +1330,6 @@ const VIDEOS={
   tour:{id:80849,t:"A quick tour of our office",fit:"contain"},
   goodall:{id:79031,t:"A minute with Dr. Goodall"},
   booker:{id:91636,t:"A minute with Dr. Booker",fit:"cover"},
-  april:{id:41132,t:"Meet April, hygienist & half-marathoner"},
   laser:{id:31128,t:"Dr. Goodall on our Deka laser"},
   chairside:{id:54490,t:"Chairside with Dr. Goodall"},
   summer:{id:36682,t:"Summer prep, dentist edition"},
@@ -1344,7 +1343,7 @@ const VIDEOS={
 };
 const vsrc=v=>`/videos/gfd-${v.id}`;
 function videoTile(k){const v=VIDEOS[k];return `<figure class="vid${v.fit?" wide fit-"+v.fit:""}"><div class="vid-frame"><video preload="none" playsinline controls data-poster="${vsrc(v)}.jpg" aria-label="${v.t.replace(/"/g,"&quot;")} — Goodall Family Dentistry video"><source src="${vsrc(v)}.mp4" type="video/mp4"></video></div><figcaption>${v.t}</figcaption></figure>`}
-function videoCarousel(keys=["goodall","booker","april","tour","twoKinds","genz","summer","race"],title="See our team <em>in action.</em>",sub="Short videos of our team and office, straight from our Instagram.",eyebrow="On Instagram"){
+function videoCarousel(keys=["goodall","booker","tour","twoKinds","genz","summer","race"],title="See our team <em>in action.</em>",sub="Short videos of our team and office, straight from our Instagram.",eyebrow="On Instagram"){
   const id="vids-"+keys[0];
   return `<section class="vids" aria-labelledby="${id}"><div class="wrap">
     <div class="section-head"><div><span class="eyebrow">${eyebrow}</span><h2 id="${id}">${title}</h2></div><div class="gal-btns"><button type="button" aria-label="Previous videos" data-vid="-1">←</button><button type="button" aria-label="Next videos" data-vid="1">→</button></div></div>
@@ -1721,7 +1720,7 @@ PAGES.about = ()=>({title:"Meet Our Cary Dentists | Goodall Family Dentistry",
     <div class="section-head"><div><span class="eyebrow">Meet the staff</span><h2>Meet <em>our team.</em></h2></div><p class="staff-hint" style="color:var(--ink-2);margin:0"><span class="hint-hover">Hover over a photo to see their fun side.</span><span class="hint-tap">Tap a photo to see their fun side.</span></p></div>
     <div class="grid g4 staff-grid">${STAFF.map(([n,r])=>`<div class="staff reveal" tabindex="0"><div class="ph"><img class="s-main" src="${IMAGES.staff(n)}" srcset="${IMAGES.staff(n).replace(".jpg","-400.webp")} 400w, ${IMAGES.staff(n).replace(".jpg","-800.webp")} 800w" sizes="(max-width:600px) 46vw, (max-width:900px) 30vw, 400px" width="800" height="800" alt="${n}, ${r} at Goodall Family Dentistry in Cary NC" loading="lazy" onerror="this.remove()"><img class="s-fun" src="${IMAGES.staff(n,1)}" srcset="${IMAGES.staff(n,1).replace(".jpg","-400.webp")} 400w, ${IMAGES.staff(n,1).replace(".jpg","-800.webp")} 800w" sizes="(max-width:600px) 46vw, (max-width:900px) 30vw, 400px" width="800" height="800" alt="" aria-hidden="true" loading="lazy" onerror="this.remove()"><div class="ph-label initial" aria-hidden="true">${n[0]}</div></div><div class="s-body"><h3>${n}</h3><span>${r}</span></div></div>`).join("")}</div>
   </div></section>
-  ${videoCarousel(["goodall","booker","april","twoKinds","summer","genz","neck","race","glove"],"Get to know <em>our team.</em>","A peek at the people behind your smile — on and off the clock.")}
+  ${videoCarousel(["goodall","booker","twoKinds","summer","genz","neck","race","glove"],"Get to know <em>our team.</em>","A peek at the people behind your smile — on and off the clock.")}
   <section><div class="wrap" style="max-width:860px"><h2 class="center">Questions about <em>our team</em></h2>${faqHTML(ABOUT_FAQ)}</div></section>
   ${bandHTML("Come meet us <em>in person.</em>")}`});
 
